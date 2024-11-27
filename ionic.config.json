@@ -1,0 +1,7 @@
+{
+  "name": "lol-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
