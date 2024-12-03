@@ -1,0 +1,39 @@
+.toolbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  ion-title {
+    margin-right: 20px;
+  }
+
+  .header-links {
+    display: flex;
+    align-items: center;
+
+    .header-link {
+      font-size: 16px;
+      color: gray;
+      cursor: pointer;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s, transform 0.3s;
+
+      &:hover {
+        color: #cacdcb;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}

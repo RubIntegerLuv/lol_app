@@ -1,0 +1,83 @@
+/* Asegura que el contenedor principal tenga algo de espacio */
+.container {
+  margin-top: 20px; /* Espacio superior */
+}
+
+/* Ajusta la imagen de cada campeón para que sea más clara */
+ion-card img {
+  width: 100%;  /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+  height: auto;  /* Mantiene la relación de aspecto */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+/* Añade algo de espacio entre las tarjetas */
+ion-card {
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
+  transition: transform 0.3s ease; /* Animación para el hover */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+  margin-bottom: 20px; /* Espacio hacia abajo entre cada tarjeta */
+}
+
+/* Estilo para los botones dentro de la tarjeta */
+ion-button {
+  width: 100%;  /* Hace que el botón ocupe el ancho completo de la tarjeta */
+  margin-top: 10px;  /* Da un pequeño margen arriba */
+  --background: #34495e;
+  color: white !important;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+ion-card:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+}
+
+/* Responsividad para que se vean las tarjetas de forma responsiva */
+
+/* Se aseguran las tarjetas en filas flexibles */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Para pantallas pequeñas (móviles) se muestran 2 cartas por fila */
+@media (max-width: 576px) {
+  .col-6 {
+    flex: 0 0 50%; /* Dos cartas por fila en pantallas pequeñas */
+    max-width: 50%;
+  }
+}
+
+/* Para pantallas medianas (tabletas) se muestran 4 cartas por fila */
+@media (min-width: 576px) and (max-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 25%; /* Se ajustan 4 cartas por fila en pantallas medianas */
+    max-width: 25%;
+  }
+}
+
+/* Para pantallas grandes (computadoras), las cartas se hacen más pequeñas y se muestran hasta 8 por fila */
+@media (min-width: 768px) {
+  .col-lg-1 {
+    flex: 0 0 12.5%; /* Cada carta ocupa 1/8 del ancho */
+    max-width: 12.5%; /* 8 cartas por fila en pantallas grandes */
+  }
+}
+
+/* Aseguramos que las cartas tengan el mismo tamaño */
+.card-equal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Asegura que las cartas tengan la misma altura */
+ion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100%; /* Asegura que ocupe toda la altura del contenido */
+  padding: 16px; /* Espacio alrededor del contenido */
+}
+
+form {
+  background-color: #161616; /* Color de fondo verde oscuro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 1600000px rgba(255, 255, 255, 0.205); /* Sombra blanca */
+  padding: 20px; /* Espacio interno del formulario */
+  width: 100%; /* Asegura que el formulario ocupe el ancho disponible */
+  max-width: 400px; /* Ancho máximo del formulario */
+}
+
+.form-title {
+  text-align: center; /* Centra el texto del título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  font-size: 44px; /* Tamaño de fuente del título */
+  color: #ffffff; /* Color del texto en blanco para contraste */
+}
+
+ion-item {
+  margin-bottom: 16px; /* Espacio entre los inputs */
+}
+
+ion-button.custom-button {
+  --background: #007bff; /* Color de fondo azul */
+  --color: #ffffff; /* Color del texto blanco */
+  --border-radius: 5px; /* Bordes redondeados */
+  padding: 12px; /* Espacio interno */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover */
+ion-button.custom-button:hover {
+  --background: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+ion-button {
+  --background: #007bff; /* Color de fondo azul */
+  --color: #ffffff; /* Color del texto blanco */
+  --border-radius: 5px; /* Bordes redondeados */
+  padding: 12px; /* Espacio interno */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover */
+ion-button {
+  --background: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+.register-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgb(22, 22, 22);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

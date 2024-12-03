@@ -1,0 +1,92 @@
+/* Contenedor de texto de bienvenida */
+.welcome-text {
+  text-align: center;
+  margin-top: 20px; /* Espacio superior */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  display: flex;
+  justify-content: center;  /* Centra la imagen horizontalmente */
+  align-items: center;      /* Centra la imagen verticalmente */
+  height: 300px;            /* Ajusta la altura de la imagen */
+  margin-top: 20px;         /* Espacio superior */
+  max-width: 90%;           /* Limita el contenedor a un 90% del ancho de la pantalla */
+  margin-left: auto;        /* Alinea el contenedor al centro */
+  margin-right: auto;       /* Alinea el contenedor al centro */
+  padding-left: 5px;        /* Margen izquierdo */
+  padding-right: 5px;       /* Margen derecho */
+}
+
+.image-container img {
+  max-width: 100%;          /* La imagen no debe desbordarse horizontalmente */
+  max-height: 100%;         /* La imagen no debe desbordarse verticalmente */
+  object-fit: contain;      /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo del contenedor del botón */
+.button-container {
+  display: flex;
+  justify-content: center;  /* Centra el botón horizontalmente */
+  margin-top: 20px;         /* Espacio superior */
+}
+
+/* Animación fade-in */
+.welcome-text, .image-container, .button-container {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilo para el botón "Ingresar" */
+ion-button {
+  --background: #1d330f; /* Verde para el centro del botón */
+  --color: #ffb700bb; /* Color oscuro para el texto */
+  --border-radius: 0px; /* Borde cuadrado */
+  --padding: 12px 20px;
+  transition: all 0.3s ease;
+  border: 3px solid #F5B100; /* Borde naranja (dorados) similar al logo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para el botón */
+
+  /* Efecto de resplandor */
+  &:hover {
+    --background: #1d330f; /* Verde más oscuro al pasar el mouse */
+    --box-shadow: 0 6px 14px rgba(255, 184, 0, 0.8); /* Resplandor dorado */
+    transform: translateY(-3px); /* Efecto de elevación */
+  }
+
+  &:active {
+    --background: #1d330f; /* Verde aún más oscuro cuando se hace clic */
+    --box-shadow: 0 3px 10px rgba(255, 184, 0, 0.6); /* Resplandor más tenue al hacer clic */
+    transform: translateY(2px); /* Reduce el efecto de elevación al hacer clic */
+  }
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 16px;
+  color: #F5B100; /* Un dorado suave que combina con el botón */
+  margin-top: 10px;
+}
+
+
+
+/* Estilo para dispositivos móviles con margen de 10px en los lados de la imagen */
+@media (max-width: 576px) {
+  .image-container {
+    max-width: 100%;      /* Asegura que el contenedor ocupe el 100% del ancho */
+    padding-left: 10px;   /* Margen izquierdo aumentado a 10px */
+    padding-right: 10px;  /* Margen derecho aumentado a 10px */
+  }
+  .image-container img {
+    margin-left: 0;      /* Asegura que la imagen no tenga márgenes adicionales */
+    margin-right: 0;     /* Asegura que la imagen no tenga márgenes adicionales */
+  }
+}

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Botón de menú hamburguesa -->
+    <ion-buttons slot="start">
+      <ion-menu-button (click)="toggleMenu()"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bienvenido {{ userName }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Menú lateral -->
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button (click)="goToInicio()">Inicio</ion-item>
+      <ion-item button (click)="goToCampeones()">Campeones</ion-item>
+      <ion-item button (click)="goToPerfil()">Mi Perfil</ion-item>
+      <ion-item button (click)="logout()">Cerrar Sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

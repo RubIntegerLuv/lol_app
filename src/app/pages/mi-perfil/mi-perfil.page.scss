@@ -1,0 +1,115 @@
+/* Forzar fondo negro en ion-content */
+ion-content {
+  --background: #000 !important; /* Fondo negro */
+  background-color: #000 !important; /* Asegura compatibilidad adicional */
+}
+
+/* Ajustes para el contenido interno */
+ion-card-content {
+  background-color: transparent !important; /* Fondo transparente para respetar el fondo negro del ion-content */
+}
+
+ion-item {
+  background-color: #1c1c1c !important; /* Color oscuro para mantener contraste */
+}
+
+body {
+  background-color: #000 !important; /* Asegura que el fondo global sea negro */
+}
+
+ion-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
+}
+
+/* Imagen del campeón favorito */
+ion-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Título y contenido de la tarjeta */
+ion-card-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+ion-card-title {
+  font-size: 29px; /* Aumento de 5px */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Contenido de la tarjeta */
+ion-card-content {
+  padding: 16px;
+  background-color: #ecf0f1;
+}
+
+ion-card-content p {
+  font-size: 20px; /* Aumento de 5px */
+  line-height: 1.6;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+ion-card-content strong {
+  color: #2c3e50;
+}
+
+/* Información básica del usuario */
+ion-item {
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ion-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+ion-text {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Mensaje si no hay campeón favorito */
+div {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #999;
+}
+
+/* Responsividad */
+@media (max-width: 576px) {
+  ion-card-header {
+    padding: 12px;
+  }
+  ion-card-content {
+    padding: 12px;
+  }
+  ion-item {
+    padding: 10px;
+  }
+}
+/* Contenedor principal */
+.container {
+  width: 80%;
+  margin: 0 auto;  /* Centra el contenedor */
+  padding: 20px 0;  /* Agrega algo de espacio interno en la parte superior e inferior */
+}
+
+ion-content {
+  padding: 0;
+  background-color: #f4f4f9;
+}

@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<ion-content>
+  <div class="container mt-4">
+    <!-- Filtro de búsqueda -->
+    <ion-searchbar [(ngModel)]="filtro" debounce="300"></ion-searchbar>
+
+    <div class="row">
+      <div *ngFor="let campeon of campeones | filterCampeones:filtro" class="col-6 col-md-2 col-lg-1 mb-4">
+        <ion-card class="card-equal">
+          <img [src]="'https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/' + campeon.image.full" alt="{{ campeon.name }}" />
+          <ion-card-header>
+            <ion-card-title>{{ campeon.name }}</ion-card-title>
+            <p>{{ campeon.title }}</p>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button (click)="verCampeon(campeon.id)">Ver Campeón</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+</ion-content>

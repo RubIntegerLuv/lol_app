@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<ion-content>
+  <!-- Card con splash art -->
+  <ion-card *ngIf="campeon">
+    <img [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + campeon.id + '_0.jpg'"
+         alt="{{ campeon.name }}" />
+    <ion-card-header>
+      <ion-row>
+        <!-- Nombre del campeón -->
+        <ion-col>
+          <ion-card-title>{{ campeon.name }}</ion-card-title>
+          <p>{{ campeon.title }}</p>
+        </ion-col>
+      </ion-row> <!-- Aquí cierras correctamente el ion-row -->
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Región:</strong> {{ campeon.region }}</p> <!-- Mostrar región -->
+      <p><strong>Rol:</strong> {{ getRoleInSpanish(campeon.roles[0]) }}</p> <!-- Mostrar rol traducido -->
+      <p><strong>Historia:</strong></p>
+      <p>{{ campeon.lore }}</p> <!-- Mostrar historia -->
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón para establecer como favorito -->
+  <ion-card *ngIf="campeon">
+    <ion-card-content>
+      <div class="button-container">
+        <ion-button class="favorite-button" (click)="setAsFavorite(campeon)">Elegir Main</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Listado de habilidades -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label><strong>Habilidades</strong></ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let habilidad of campeon?.spells">
+      <ion-thumbnail slot="start">
+        <img [src]="'https://ddragon.leagueoflegends.com/cdn/13.21.1/img/spell/' + habilidad.image.full"
+             alt="{{ habilidad.name }}" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ habilidad.name }}</h2>
+        <p>{{ habilidad.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

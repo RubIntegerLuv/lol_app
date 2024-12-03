@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<ion-content>
+  <!-- Contenedor principal con un ancho del 80% -->
+  <div class="container">
+    <!-- Card con la imagen del campeón favorito -->
+    <ion-card *ngIf="favoriteChampion">
+      <img [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + favoriteChampion.id + '_0.jpg'"
+           alt="{{ favoriteChampion.name }}" />
+      <ion-card-header>
+        <ion-row>
+          <!-- Nombre del usuario (como título de la card) -->
+          <ion-col>
+            <ion-card-title>{{ name }}</ion-card-title>
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+    </ion-card>
+
+    <!-- Información básica del usuario -->
+    <ion-card>
+      <ion-card-header>
+        <ion-title>Perfil de Usuario</ion-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Nombre del campeón favorito -->
+        <ion-item>
+          <ion-label>Main:</ion-label>
+          <ion-text>{{ favoriteChampion?.name || 'No seleccionado' }}</ion-text>
+        </ion-item>
+
+        <!-- Rango del usuario -->
+        <ion-item>
+          <ion-label>Rango:</ion-label>
+          <ion-text>{{ rank }}</ion-text>
+        </ion-item>
+
+        <!-- Rol preferido -->
+        <ion-item>
+          <ion-label>Rol:</ion-label>
+          <ion-text>{{ rol }}</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Mensaje si no se ha seleccionado un campeón favorito -->
+    <div *ngIf="!favoriteChampion">
+      <p>No has seleccionado un campeón favorito.</p>
+    </div>
+  </div>
+</ion-content>
