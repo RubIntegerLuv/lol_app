@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '',
@@ -9,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: 'campeones',
-    loadChildren: () => import('./pages/campeones/campeones.module').then( m => m.CampeonesPageModule)
+    loadChildren: () => import('./pages/campeones/campeones.module').then(m => m.CampeonesPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -21,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'mi-perfil',
-    loadChildren: () => import('./pages/mi-perfil/mi-perfil.module').then( m => m.MiPerfilPageModule)
+    loadChildren: () => import('./pages/mi-perfil/mi-perfil.module').then( m => m.MiPerfilPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'inicio',
@@ -29,7 +31,8 @@ const routes: Routes = [
   },
   {
     path: 'detalle-campeon/:id',
-    loadChildren: () => import('./pages/detalle-campeon/detalle-campeon.module').then(m => m.DetalleCampeonPageModule)
+    loadChildren: () => import('./pages/detalle-campeon/detalle-campeon.module').then(m => m.DetalleCampeonPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'forgot-password',
